@@ -1,28 +1,29 @@
 <?php
 
+declare(strict_types=1);
+
 /**
  * Class Treasure
  */
 class Treasure
 {
     /**
-     * @var string string
+     * @var string
      */
     private $title;
 
     /**
-     * @var string string
+     * @var string
      */
     private $content;
 
     /**
-     * @var string int
+     * @var int
      */
     private $cost;
 
     /**
      * @return string
-     * @var string
      */
     public function getTitle()
     {
@@ -30,7 +31,7 @@ class Treasure
     }
 
     /**
-     * @var string
+     * @param $title
      */
     public function setTitle($title)
     {
@@ -39,7 +40,6 @@ class Treasure
 
     /**
      * @return string
-     * @var string
      */
     public function getContent()
     {
@@ -47,7 +47,7 @@ class Treasure
     }
 
     /**
-     * @var string
+     * @param $content
      */
     public function setContent($content)
     {
@@ -56,7 +56,6 @@ class Treasure
 
     /**
      * @return int
-     * @var int
      */
     public function getCost()
     {
@@ -64,7 +63,7 @@ class Treasure
     }
 
     /**
-     * @var int
+     * @param $cost
      */
     public function setCost($cost)
     {

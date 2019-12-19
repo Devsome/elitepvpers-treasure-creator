@@ -43,12 +43,12 @@ class TreasureManager
     {
         $url = 'https://www.elitepvpers.com/theblackmarket/treasures/';
         $referer = self::BASE_URL;
-        $postFields = array(
+        $postFields = [
             'title' => $treasure->getTitle(),
             'content' => $treasure->getContent(),
             'cost' => $treasure->getCost(),
             'createtreasure' => 'Submit'
-        );
+        ];
         $this->sendHttpPostRequest($url, $referer, $postFields);
     }
 
@@ -59,7 +59,7 @@ class TreasureManager
     {
         $url = self::BASE_URL . 'login.php?do=login';
         $referer = self::BASE_URL;
-        $postFields = array(
+        $postFields = [
             'do' => 'login',
             'vb_login_username' => $this->username,
             'vb_login_password' => '',
@@ -68,7 +68,7 @@ class TreasureManager
             'securitytoken' => 'guest',
             's' => '',
             'cookieuser' => '1'
-        );
+        ];
         $this->sendHttpPostRequest($url, $referer, $postFields);
         $url = self::BASE_URL . 'index.php';
         $referer = self::BASE_URL . 'login.php?do=login';
